@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {defaultBcg} from "../images/room-1.jpeg";
-import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import {RoomContext} from '../Context'
@@ -54,7 +53,7 @@ export default class Singleroom extends Component {
                 <section className="single-room">
                     <div className="single-room-images">
                         {otherImgs.map((item, index) => {
-                            return <img key={index} src={item} alr={name}/>
+                            return <img key={index} src={item} alt={name}/>
                         })}
                     </div>
                     <div className="single-room-info">

@@ -12,7 +12,7 @@ export default function Roomlist({rooms}) {
 
     return (
         <>
-            <section className="roomlist">
+            <section className="roomslist">
                 <div className="roomslist-center">
                     {rooms.map(item => {
                         return <Room key={item.id} room={item}/>;
