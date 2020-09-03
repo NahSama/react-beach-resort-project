@@ -523,15 +523,19 @@
   font-family: Open Sans;
 }
 
+footer{
+  background: #666;
+}
+
 .footer-distributed{
+  width: 60vw;
+  margin: 0 auto;
   padding: 5rem 0;
 	background: #666;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
-	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
-	padding: 55px 50px;
 }
 
 .footer-distributed .footer-left,
@@ -597,7 +601,7 @@
 	border-radius: 50%;
 	text-align: center;
 	line-height: 42px;
-	margin: 10px 15px;
+	margin: 10px 50px;
 	vertical-align: middle;
 }
 
@@ -611,7 +615,7 @@
 	color: #ffffff;
   font-weight:400;
 	vertical-align: middle;
-	margin:0;
+	margin: 10px;
 }
 
 .footer-distributed .footer-center p span{
