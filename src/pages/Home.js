@@ -4,6 +4,8 @@ import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import Services from '../components/Services';
 import FeaturedRooms from '../components/FeaturedRooms';
+import Footer from '../components/Footer';
+
 // import Img from '../components/StyledHero';
 
 export default function Home() {
@@ -15,8 +17,7 @@ export default function Home() {
             </Banner>
         </Hero>
         <Services />
-        <FeaturedRooms />
-        
+        <FeaturedRooms />        
         </>
     )
 }
