@@ -2,15 +2,15 @@ import React, {Component, useEffect} from 'react'
 import { Map, GoogleApiWrapper, Marker, DirectionsRenderer} from 'google-maps-react';
 
 const mapStyles = {
-  maxWidth: "300px",
-  height: "200px",
+  width: "100%",
+  height: "100%",
   overflowX: "hidden",
   overflowY: "hidden"
   };
 
 const containerStyle = {
-  maxWidth: "300px",
-  height: "200px"
+  width: "95%",
+  height: "100%"
  };
 
 class MapContainer extends Component {

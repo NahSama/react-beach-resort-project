@@ -9,7 +9,7 @@ export default function Footer() {
                 <div className="footer-left">
                     <h3>Resort</h3>
                     <p className="footer-links"></p>
-                    <MapContainer/>
+                    <MapContainer className="map"/>
                 </div>
                 <div className="footer-center">
                     <div>
