@@ -14,6 +14,7 @@ import {Route, Switch} from 'react-router-dom';
 
 import Navbar  from './components/Navbar';
 import Footer from './components/Footer';
+import About from './pages/About'
 
 library.add(fab, faPhone, faEnvelope, faMapMarker)
 
@@ -25,7 +26,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}/> 
         <Route exact path="/rooms/" component={Rooms}/> 
-        <Route exact path="/rooms/:slug" component={SingleRoom}/> 
+        <Route exact path="/rooms/:slug" component={SingleRoom}/>
+        <Route exact path="/about/" component={About}/>
         <Route component={Error} />
       </Switch>
       <Footer/>

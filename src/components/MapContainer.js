@@ -1,5 +1,5 @@
 import React, {Component, useEffect} from 'react'
-import { Map, GoogleApiWrapper, Marker, DirectionsRenderer} from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker, InfoWindow} from 'google-maps-react';
 
 const mapStyles = {
   width: "100%",
@@ -10,7 +10,7 @@ const mapStyles = {
 
 const containerStyle = {
   width: "95%",
-  height: "100%"
+  height: "100%",
  };
 
 class MapContainer extends Component {
@@ -18,7 +18,7 @@ class MapContainer extends Component {
       super(props);
   
       this.state = {
-        stores: [{latitude: 1.361185, longitude: 103.812534}],
+        stores: [{latitude: 1.361185, longitude: 103.812534, label: "Resort location."}],
         user: null
       }
     }
@@ -26,25 +26,35 @@ class MapContainer extends Component {
     componentDidMount() {
         navigator.geolocation.getCurrentPosition((position) =>  {
           this.setState({
-              user: {latitude: position.coords.latitude, longitude: position.coords.longitude}
+              user: {latitude: position.coords.latitude, longitude: position.coords.longitude, label: "Your current location."}
           })
         });   
     }
 
     displayUsers = () => {
-        console.log(this.state.user)
         return <Marker position={{
             lat: this.state.user.latitude,
             lng: this.state.user.longitude
-          }}/>
+          }} 
+            label={{
+            text: this.state.user.label,
+            fontSize: "8px",
+            fontWeight: "500",
+            }}
+        />
     }
+
 
     displayMarkers = () => {
       return this.state.stores.map((item, index) => {
         return <Marker key={index} id={index} position={{
          lat: item.latitude,
          lng: item.longitude
-       }}/>
+       }} 
+        label={{
+            text: item.label,
+            fontSize: "8px",
+            fontWeight: "500",}}/>
       })
     }
   

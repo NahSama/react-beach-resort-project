@@ -157,15 +157,20 @@
   /* end of navbar */
   /* Hero */
   .defaultHero,
-  .roomsHero {
+  .roomsHero,
+  .aboutHero {
     min-height: calc(100vh - 66px);
-    background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+    background: url("./images/hero_1.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .roomsHero {
-    background-image: url("./images/room-2.jpeg");
+    background-image: url("./images/hero_3.jpg");
+    min-height: 60vh;
+  }
+  .aboutHero {
+    background-image: url("./images/hero_1.jpg");
     min-height: 60vh;
   }
   /* End of Hero */
@@ -715,3 +720,87 @@ footer{
 
 }
   /* end of footer */
+
+  /* about us */
+  .staff {
+    box-shadow: var(--lightShadow);
+    transition: var(--mainTransition);
+  }
+  .staff:hover {
+    box-shadow: var(--darkShadow);
+  }
+  .staff-info {
+    background: var(--darkGrey);
+    text-transform: capitalize;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: var(--mainSpacing);
+  }
+  .staffslist, .history {
+    padding: 5rem 0;
+  }
+  .staffslist-center {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 30px;
+  }
+  .history-center {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 30px;
+  }
+
+  .history-center p {
+    padding: 10px 0;
+  }
+
+  .history-center-left .link {
+    color: red
+
+  }
+
+  .history-center img {
+    width: 100%
+  }
+
+  .role-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--mainWhite);
+    padding: 0.3rem 0.6rem 0.5rem;
+    border-bottom-right-radius: 1rem;
+    font-size: 0.5rem;
+    text-align: center;
+    transition: var(--mainTransition);
+  }
+  .role-top h6 {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: var(--mainSpacing);
+  }
+  
+  @media screen and (min-width: 776px) {
+    .staffslist-center {
+      width: 90vw;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .staffslist-center {
+      width: 95vw;
+      max-width: 1170px;
+    }
+  }
+
+
+  /* end of about us */
+  

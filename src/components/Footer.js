@@ -7,7 +7,7 @@ export default function Footer() {
         <footer>
             <div className="footer-distributed">         
                 <div className="footer-left">
-                    <h3>Resort</h3>
+                    <h3>Location</h3>
                     <p className="footer-links"></p>
                     <MapContainer className="map"/>
                 </div>
