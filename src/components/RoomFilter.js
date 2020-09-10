@@ -20,7 +20,7 @@ export default function Roomfilter({rooms}) {
     })
 
     let capacities = getUnique(rooms, 'capacity');
-    capacities = capacities.map((item, index) => {
+    capacities = capacities.sort((a,b) => a - b).map((item, index) => {
         return <option value={item} key={index}>{item}</option>
     })
     return (
