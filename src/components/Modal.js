@@ -20,11 +20,12 @@ export default class Modal extends Component {
         return (
             <div className="backdrop" onClick={handleClick}
             >
-                <MapContainer className="map" containerStyle={ {
-                                                                width: "80%",
-                                                                height: "100%",
-                                                                left: "10%",
-                                                                }} zoom={12}/>
+                <MapContainer className="map" 
+                containerStyle={ {
+                    width: "80%",
+                    height: "100%",
+                    left: "10%",
+                    }} zoom={12}/>
             </div>
         )
     }
