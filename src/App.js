@@ -16,21 +16,36 @@ import Navbar  from './components/Navbar';
 import Footer from './components/Footer';
 import About from './pages/About'
 
+import {MapProvider, MapConsumer} from './MapContext'
+import Modal from './components/Modal';
+
 library.add(fab, faPhone, faEnvelope, faMapMarker)
 
 
 function App() {
+    
   return (
     <>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home}/> 
-        <Route exact path="/rooms/" component={Rooms}/> 
-        <Route exact path="/rooms/:slug" component={SingleRoom}/>
-        <Route exact path="/about/" component={About}/>
-        <Route component={Error} />
-      </Switch>
-      <Footer/>
+        <Navbar />
+        <Switch>
+            <Route exact path="/" component={Home}/> 
+            <Route exact path="/rooms/" component={Rooms}/> 
+            <Route exact path="/rooms/:slug" component={SingleRoom}/>
+            <Route exact path="/about/" component={About}/>
+            <Route component={Error} />
+        </Switch>
+        <MapProvider>
+            <Footer/>
+            <MapConsumer>
+                {(value) => {
+                    const {selected} = value;
+                    if(selected)
+                    return (
+                        <Modal/>
+                    )
+                }}
+            </MapConsumer>
+        </MapProvider>
     </>
   );
 }

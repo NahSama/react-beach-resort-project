@@ -8,7 +8,7 @@ export default [
         },
         fields: {
             name: "Steve Nguyen",
-            role: "Developer",
+            role: "Founder",
             quote: "Quis veniam elit enim cupidatat sunt aute laborum.",
             avatar: ava1
         }
@@ -19,7 +19,7 @@ export default [
         },
         fields: {
             name: "Joshep Nguyen",
-            role: "Founder",
+            role: "Co-founder",
             quote: "Culpa ex elit amet excepteur.",
             avatar: ava2
         }

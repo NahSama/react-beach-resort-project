@@ -1,5 +1,6 @@
 import React, {Component, useEffect} from 'react'
 import { Map, GoogleApiWrapper, Marker, InfoWindow} from 'google-maps-react';
+import {MapContext} from '../MapContext'
 
 const mapStyles = {
   width: "100%",
@@ -22,6 +23,8 @@ class MapContainer extends Component {
         user: null
       }
     }
+
+    static contextType = MapContext
 
     componentDidMount() {
         navigator.geolocation.getCurrentPosition((position) =>  {
@@ -59,13 +62,16 @@ class MapContainer extends Component {
     }
   
     render() {
+        
+
       return (
           <Map
             google={this.props.google}
-            zoom={10}
+            zoom={this.props.zoom || 10}
             style={mapStyles}
-            containerStyle={containerStyle}
+            containerStyle={this.props.containerStyle || containerStyle}
             initialCenter={{ lat: 1.361185, lng: 103.812534}}
+            onClick={this.context.toggle}
           >
             {this.displayMarkers()}
             {this.state.user && this.displayUsers()}
