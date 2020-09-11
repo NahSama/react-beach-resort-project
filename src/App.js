@@ -9,15 +9,17 @@ import Home from './pages/Home';
 import Rooms from './pages/Rooms';
 import SingleRoom from './pages/SingleRoom';
 import Error from './pages/Error';
+import About from './pages/About'
 
 import {Route, Switch} from 'react-router-dom';
 
 import Navbar  from './components/Navbar';
 import Footer from './components/Footer';
-import About from './pages/About'
 
 import {MapProvider, MapConsumer} from './MapContext'
 import Modal from './components/Modal';
+import Chatbot from './components/Chatbot'
+
 
 library.add(fab, faPhone, faEnvelope, faMapMarker)
 
@@ -34,6 +36,7 @@ function App() {
             <Route exact path="/about/" component={About}/>
             <Route component={Error} />
         </Switch>
+        <Chatbot/>
         <MapProvider>
             <Footer/>
             <MapConsumer>
