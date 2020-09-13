@@ -444,7 +444,7 @@
     padding: 5rem 0;
   }
   .roomslist-center {
-    width: 70%;
+    width: 80vw;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -452,7 +452,7 @@
     grid-column-gap: 30px;
   }
   
-  /* @media screen and (min-width: 776px) {
+  @media screen and (min-width: 776px) {
     .roomslist-center {
       width: 90%;
     }
@@ -462,7 +462,7 @@
       width: 95%;
       max-width: 1170px;
     }
-  } */
+  }
   /* end of roomlist */
   /*  rooms fitler*/
   .filter-container {
@@ -827,3 +827,15 @@ footer{
         bottom: 0;
         right: 0;
     }
+
+    .chatbot-roomslist {
+    }
+    .chatbot-roomslist-center {
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 30px;
+    }
+      

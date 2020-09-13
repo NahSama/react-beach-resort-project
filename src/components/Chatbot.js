@@ -5,7 +5,7 @@ import botAvatar from '../images/Chatbot/botAva.png'
 import RoomList from './RoomList';
 import {RoomContext} from '../Context'
 import { FaRegPaperPlane } from 'react-icons/fa';
-import Roomlist from './RoomList';
+import ChatbotRoomlist from './ChatbotRoomList';
 
 const theme = {
     background: '#f5f8fb',
@@ -48,7 +48,7 @@ class Chatbot extends Component {
             },
             {
               id: '2',
-              component: <Roomlist rooms={this.state.sortedRoom}/>,
+              component: <ChatbotRoomlist rooms={this.state.sortedRoom}/>,
               trigger: '4'
             },
             {
@@ -65,7 +65,7 @@ class Chatbot extends Component {
                 this.state.sortedRoom &&
                 <ThemeProvider theme={theme}>
                     <ChatBot
-                    headerTitle={'Beach Resort'}
+                    headerTitle={'Wonderful Resort'}
                     botAvatar={botAvatar}
                     steps={steps}
                     toggleFloating={this.toggleFloating}
