@@ -4,6 +4,8 @@ import Loading from "./Loading";
 import RoomsFilter from "./RoomFilter";
 import RoomsList from "./RoomList";
 
+
+//Because Functional Component cannot use context if it's not under ContextConsumer
 function RoomContainer({ context }) {
   const { loading, sortedRooms, rooms } = context;
   if (loading) {

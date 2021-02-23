@@ -157,15 +157,20 @@
   /* end of navbar */
   /* Hero */
   .defaultHero,
-  .roomsHero {
+  .roomsHero,
+  .aboutHero {
     min-height: calc(100vh - 66px);
-    background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+    background: url("./images/hero_1.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .roomsHero {
-    background-image: url("./images/room-2.jpeg");
+    background-image: url("./images/hero_3.jpg");
+    min-height: 60vh;
+  }
+  .aboutHero {
+    background-image: url("./images/hero_1.jpg");
     min-height: 60vh;
   }
   /* End of Hero */
@@ -449,12 +454,12 @@
   
   @media screen and (min-width: 776px) {
     .roomslist-center {
-      width: 90vw;
+      width: 90%;
     }
   }
   @media screen and (min-width: 992px) {
     .roomslist-center {
-      width: 95vw;
+      width: 95%;
       max-width: 1170px;
     }
   }
@@ -514,7 +519,323 @@
   #price {
     background: #FCF3CF
   }
-
-  
-  
   /* end of rooms fitler*/
+
+  /* footer */
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+footer{
+  background: #666;
+}
+
+.footer-distributed{
+  width: 60vw;
+  margin: 0 auto;
+  padding: 5rem 0;
+	background: #666;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	text-align: left;
+	font: bold 16px sans-serif;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+.footer-distributed .footer-left > div {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 50px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin: 10px;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+  /* end of footer */
+
+  /* about us */
+  .staff {
+    box-shadow: var(--lightShadow);
+    transition: var(--mainTransition);
+  }
+  .staff:hover {
+    box-shadow: var(--darkShadow);
+  }
+  .staff-info {
+    background: var(--darkGrey);
+    text-transform: capitalize;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: var(--mainSpacing);
+  }
+  .staffslist, .history {
+    padding: 5rem 0;
+  }
+  .staffslist-center {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 30px;
+  }
+  .history-center {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 30px;
+  }
+
+  .history-center p {
+    padding: 10px 0;
+  }
+
+  .history-center-left .link {
+    color: red
+
+  }
+
+  .history-center img {
+    width: 100%
+  }
+
+  .role-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--mainWhite);
+    padding: 0.3rem 0.6rem 0.5rem;
+    border-bottom-right-radius: 1rem;
+    font-size: 0.5rem;
+    text-align: center;
+    transition: var(--mainTransition);
+  }
+  .role-top h6 {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: var(--mainSpacing);
+  }
+  
+  @media screen and (min-width: 776px) {
+    .staffslist-center {
+      width: 90vw;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .staffslist-center {
+      width: 95vw;
+      max-width: 1170px;
+    }
+  }
+  /* end of about us */
+
+    /* modal styles */
+    .backdrop{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+    }
+    /* .backdrop {
+        display: block;
+        max-width: 60%;
+        max-height: 80%;
+        margin: 60px auto;
+        box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
+        border: 3px solid white;
+    }   */
+
+    /* Chatbot  */
+
+    .rsc {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+
+    .chatbot-roomslist {
+    }
+    .chatbot-roomslist-center {
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 30px;
+    }
+      
