@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {defaultBcg} from "../images/room-1.jpeg";
 import Banner from '../components/Banner';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import {RoomContext} from '../Context'
 import StyledHero from '../components/StyledHero'
 
@@ -18,9 +18,11 @@ export default class Singleroom extends Component {
     
     static contextType = RoomContext;
 
-    // componentDidMount(){
+    componentWillReceiveProps(nextProps) {
+        this.setState({slug: nextProps.match.params.slug});
+    }
 
-    // }
+    
     
 
     render() {
